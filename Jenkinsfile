@@ -7,9 +7,20 @@ pipeline {
     
   }
   stages {
-    stage('build') {
+    stage('initialize') {
       steps {
-        sh 'echo "Building test project..."'
+        sh '''echo "Initialize project..."
+
+
+
+
+
+
+
+
+
+
+'''
       }
     }
   }
