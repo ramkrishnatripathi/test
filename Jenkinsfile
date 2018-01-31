@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      args 'F:\\.m2'
-      image 'maven:3.3.9-jdk8 -v'
+      image 'maven:3.3.9-jdk8'
+      args '-v "F:\\.m2"'
     }
     
   }
@@ -21,6 +21,11 @@ pipeline {
 
 
 '''
+      }
+    }
+    stage('Build') {
+      steps {
+        sh ' echo "Building the project.."'
       }
     }
   }
